@@ -16,6 +16,7 @@ class InteractionCreateAction extends Action {
     const guild = client.guilds.cache.get(data.guild_id);
     const interaction = {
       id: data.id,
+      token: data.token,
       channel: client.channels.cache.get(data.channel_id),
       guild: guild,
       member: guild ? guild.members.cache.get(data.member.user.id) || (await guild.members.fetch(data.member.user.id)) || null : null,

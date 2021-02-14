@@ -2814,7 +2814,7 @@ declare module 'discord.js' {
     name: string;
     content: string;
     createdTimestamp: number;
-    options: { value: string; name: string }[] | null;
+    options: { value: string | number; name: string }[] | null;
   }
 
   interface MessageEmbedProvider {

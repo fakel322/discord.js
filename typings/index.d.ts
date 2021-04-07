@@ -993,7 +993,7 @@ declare module 'discord.js' {
       options?: AwaitReactionsOptions,
     ): Promise<Collection<Snowflake, MessageReaction>>;
     public createReactionCollector(filter: CollectorFilter, options?: ReactionCollectorOptions): ReactionCollector;
-    public delete(): Promise<Message>;
+    public delete(options?: { timeout?: number; reason?: string }): Promise<Message>;
     public edit(
       content: APIMessageContentResolvable | MessageEditOptions | MessageEmbed | APIMessage,
     ): Promise<Message>;
